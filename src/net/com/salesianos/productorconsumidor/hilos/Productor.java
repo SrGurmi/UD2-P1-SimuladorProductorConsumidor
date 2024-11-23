@@ -26,9 +26,9 @@ public class Productor extends Thread {
     try {
       for (int i = 0; i < cantidadVerduras; i++) {
         String tipo = tiposVerduras[random.nextInt(tiposVerduras.length)];
-        int tiempoCrecimiento = random.nextInt(2000) + 500; // Reducir tiempos (0.5 a 2 segundos)
+        int tiempoCrecimiento = random.nextInt(2000) + 500;
         Verdura verdura = new Verdura(tipo, tiempoCrecimiento);
-        Thread.sleep(tiempoCrecimiento); // Simula el crecimiento de la verdura
+        Thread.sleep(tiempoCrecimiento);
         almacen.agregar(verdura);
         System.out.println(nombre + " ha producido: " + verdura);
       }

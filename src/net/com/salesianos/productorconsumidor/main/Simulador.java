@@ -6,7 +6,7 @@ import net.com.salesianos.productorconsumidor.hilos.Consumidor;
 
 public class Simulador {
   public static void main(String[] args) {
-    Almacen almacen = new Almacen(10); // Capacidad del almacén
+    Almacen almacen = new Almacen(10);
 
 
     Productor productor1 = new Productor(almacen, "Paco", 10);
@@ -17,7 +17,7 @@ public class Simulador {
     Consumidor consumidor2 = new Consumidor(almacen, "Mr. Gentleman", 10);
     Consumidor consumidor3 = new Consumidor(almacen, "Loquendo", 5);
 
-    // Iniciar hilos
+
     productor1.start();
     productor2.start();
     consumidor1.start();
